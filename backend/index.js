@@ -8,10 +8,11 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/expenses', {
+mongoose.connect('mongodb://mongodb:27017/expenses', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
+
 
 const expenseSchema = new mongoose.Schema({
   title: String,
